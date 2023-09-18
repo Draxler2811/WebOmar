@@ -18,8 +18,6 @@ export class PostCreateComponent{
 //    @Output() postcreated = new EventEmitter<Post>();
 
    constructor(public postsService: PostService){}
-
-
     
     onAddPost(form: NgForm){
         if(form.invalid){
@@ -32,7 +30,6 @@ export class PostCreateComponent{
     this.postsService.addPost(form.value.title, form.value.content);
    form.resetForm();
     
-
     }
    
 }
