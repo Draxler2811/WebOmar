@@ -1,0 +1,10 @@
+<label  id="example-radio-group-label">Eligue tu estacion Favorita</label>
+<mat-radio-group 
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group" 
+  [(ngModel)]=" FavoriteSeason">
+  <mat-radio-button class="example-radio-button"  *ngFor="let season of seasons" [value]="season">
+    {{season}}
+  </mat-radio-button>
+</mat-radio-group>
+<div>Tu estacion favorita es: {{ FavoriteSeason}}</div>

@@ -1,0 +1,44 @@
+<mat-card>
+    <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+        <h2>Bienvenido a mi pagina web</h2>
+        <mat-form-field>
+            <input 
+            matInput 
+            type="text" 
+            name="title"
+            ngModel
+            required
+            placeholder="Titulo"
+            #title="ngModel">
+            <mat-error *ngIf="title.invalid">Por favor ingrese un titulo</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <textarea 
+            matInput 
+            rows="6" 
+            name="content"
+            ngModel
+            required 
+            placeholder="Contenido"
+            #content="ngModel"> </textarea>
+            <mat-error *ngIf="content.invalid">Por favor ingrese un titulo</mat-error>
+        </mat-form-field>
+        <button mat-raised-button
+        color="warn"
+      type="submit">Guardar Publicaciones</button>
+    </form>
+</mat-card>
+
+    <!-- <button (click)="onAddPost()">Guardar Publicaciones</button> -->
+    
+   
+
+
+<!-- este es para una forma -->
+<!-- <h2>Hola</h2>
+<textarea    rows="6" [value]="newPost" #postInput></textarea>
+<hr>
+<button (click)="onAddPost()">Guardar Publicaciones</button> -->
+<!-- <button (click)="onAddPost(postInput)">Guardar Publicaciones</button>
+<p>{{newPost}}</p>
+ -->
